@@ -4,8 +4,7 @@
   "description": "Benpo Trouble Flutter Web Game",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "build": "flutter build web"
+    "start": "node server.js"
   },
   "engines": {
     "node": ">=18.x"
