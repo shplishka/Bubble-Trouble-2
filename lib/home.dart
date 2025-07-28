@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:bubble_trouble/ball.dart';
-import 'package:bubble_trouble/button.dart';
-import 'package:bubble_trouble/missile.dart';
-import 'package:bubble_trouble/player.dart';
+import 'package:benpo_trouble/ball.dart';
+import 'package:benpo_trouble/button.dart';
+import 'package:benpo_trouble/missile.dart';
+import 'package:benpo_trouble/player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -74,7 +74,7 @@ void _showDialog() {
         backgroundColor: Color.fromARGB(255, 209, 238, 20),
         title: Center(
           child: Text(
-            "You've Lost!",
+            "התחרבנת!",
             style: GoogleFonts.pressStart2p(
               decoration: TextDecoration.none,
               fontSize: 20.0,
@@ -230,7 +230,7 @@ void _showDialog() {
                     right: 0,
                     child: Center(
                       child: Text(
-                        'Bubble Trouble',
+                        'benpo-trouble',
                         style: GoogleFonts.pressStart2p(
                           decoration: TextDecoration.none,
                           fontSize: 50.0,

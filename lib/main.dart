@@ -1,4 +1,4 @@
-import 'package:bubble_trouble/home.dart';
+import 'package:benpo_trouble/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
