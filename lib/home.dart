@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:benpo_trouble/ball.dart';
 import 'package:benpo_trouble/button.dart';
@@ -26,6 +27,14 @@ class _HomePageState extends State<HomePage> {
   double bY = 1;
   var ballDirection = Direction.LEFT;
   int score = 0;
+  
+  // Hebrew failure messages
+  final List<String> hebrewFailureMessages = [
+    "התחרבנת!",
+    "שוב טעית!",
+    "עוד טעות",
+    "מענין מה הרב עובדיה היה חושב על זה?"
+  ];
 
   void startGame() {
     double time = 0;
@@ -67,6 +76,10 @@ class _HomePageState extends State<HomePage> {
   }
 
 void _showDialog() {
+  // Get random Hebrew failure message
+  final random = Random();
+  final randomMessage = hebrewFailureMessages[random.nextInt(hebrewFailureMessages.length)];
+  
   showDialog(
     context: context,
     builder: (BuildContext context) {
@@ -74,22 +87,25 @@ void _showDialog() {
         backgroundColor: Color.fromARGB(255, 209, 238, 20),
         title: Center(
           child: Text(
-            "התחרבנת!",
-            style: GoogleFonts.pressStart2p(
+            randomMessage,
+            style: GoogleFonts.rubik(
               decoration: TextDecoration.none,
-              fontSize: 20.0,
+              fontSize: 24.0,
               fontWeight: FontWeight.bold,
               color: Colors.black,
             ),
+            textDirection: TextDirection.rtl,
           ),
         ),
         content: Text(
-          "Do you want to restart the game?",
-          style: GoogleFonts.pressStart2p(
+          "רוצה לנסות שוב?",
+          style: GoogleFonts.rubik(
             decoration: TextDecoration.none,
-            fontSize: 8.0,
+            fontSize: 16.0,
             color: Colors.black,
           ),
+          textDirection: TextDirection.rtl,
+          textAlign: TextAlign.center,
         ),
         actions: [
           TextButton(
@@ -98,13 +114,14 @@ void _showDialog() {
               Navigator.of(context).pop(); // Dismiss the dialog
             },
             child: Text(
-              "Restart",
-              style: GoogleFonts.pressStart2p(
+              "התחל מחדש",
+              style: GoogleFonts.rubik(
                 decoration: TextDecoration.none,
-                fontSize: 10.0,
+                fontSize: 14.0,
                 fontWeight: FontWeight.bold,
                 color: Colors.black,
               ),
+              textDirection: TextDirection.rtl,
             ),
           ),
         ],
