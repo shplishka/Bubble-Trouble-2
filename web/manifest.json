@@ -1,11 +1,11 @@
 {
-    "name": "bubble_trouble",
-    "short_name": "bubble_trouble",
+    "name": "benpo-trouble",
+    "short_name": "benpo-trouble",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Benpo Trouble - A fun bubble shooting game featuring Benpo!",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
